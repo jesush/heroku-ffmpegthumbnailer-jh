@@ -22,6 +22,6 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 
 LD_LIBRARY_PATH="$VENDOR_DIR/ffmpegthumbnailer/lib" PATH="$VENDOR_DIR/ffmpegthumbnailer/bin"
 
-mkdir -p $(dirname $PROFILE_PATH)
+#mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:$HOME/vendor/ffmpegthumbnailer/bin"' >> $PROFILE_PATH
 echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/ffmpegthumbnailer-2.2.0/lib"' >> $PROFILE_PATH
