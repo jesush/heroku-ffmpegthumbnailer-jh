@@ -15,6 +15,7 @@ echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
+cd ../
 curl -L --silent $DOWNLOAD_URL | tar xj
 
 echo "exporting PATH and LIBRARY_PATH" | indent
@@ -24,4 +25,4 @@ LD_LIBRARY_PATH="$VENDOR_DIR/ffmpegthumbnailer/lib" PATH="$VENDOR_DIR/ffmpegthum
 
 #mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:$HOME/vendor/ffmpegthumbnailer/bin"' >> $PROFILE_PATH
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/ffmpegthumbnailer-2.2.0/lib"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/ffmpegthumbnailer/lib"' >> $PROFILE_PATH
